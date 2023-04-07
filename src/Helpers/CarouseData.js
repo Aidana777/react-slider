@@ -3,27 +3,27 @@ import France from '../assets/France.jpg'
 import Venecia from '../assets/Rialto-Bridge.jpg'
 import Swiss from '../assets/Swiss.jpg'
 import Spain from '../assets/spain-madrid.avif'
-export const images=[
+export const images = [
     {
-        title:"Los-Angeles",
+        title: "Los-Angeles",
         img: LA
     },
     {
-        title:"France",
+        title: "France",
         img: France
     },
     {
-        title:"Venecia",
+        title: "Venecia",
         img: Venecia
     },
 
     {
-        title:"Swiss",
+        title: "Swiss",
         img: Swiss
     },
     {
-        title:"Spain",
-        img:  Spain
+        title: "Spain",
+        img: Spain
     },
-    
+
 ]
