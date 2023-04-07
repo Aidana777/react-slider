@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import "./carousel.css";
 import { images } from "../Helpers/CarouseData";
-// import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-// import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
-
+import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
 function Carousel() {
     const [currImg, setCurrImg] = useState(0);
@@ -21,7 +20,7 @@ function Carousel() {
                         currImg > 0 && setCurrImg(currImg - 1);
                     }}
                 >
-                    {/* {<Fa500Px style={{ fontSize: 30 }} />} */}
+                    <ArrowBackIosIcon style={{ fontSize: 30 }} />
                 </div>
                 <div className="center">
                     <h1>{images[currImg].title}</h1>
@@ -32,11 +31,10 @@ function Carousel() {
                         currImg < images.length - 1 && setCurrImg(currImg + 1);
                     }}
                 >
-                    {/* <ArrowForwardIosIcon style={{ fontSize: 30 }} /> */}
+                    <ArrowForwardIosIcon style={{ fontSize: 30 }} />
                 </div>
             </div>
         </div>
     );
 }
-
-export default Carousel;
+export default Carousel
