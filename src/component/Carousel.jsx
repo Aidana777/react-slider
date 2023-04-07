@@ -8,6 +8,16 @@ import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 function Carousel() {
     const [currImg, setCurrImg] = useState(0);
 
+    const prevSlide = () => {
+        const newIndex = currImg === 0 ? images.length - 1 : currImg - 1;
+        setCurrImg(newIndex);
+      };
+    
+      const nextSlide = () => {
+        const newIndex = currImg === images.length - 1 ? 0 : currImg + 1;
+        setCurrImg(newIndex);
+      };
+
     return (
         <div className="carousel">
             <div
@@ -16,9 +26,7 @@ function Carousel() {
             >
                 <div
                     className="left"
-                    onClick={() => {
-                        currImg > 0 && setCurrImg(currImg - 1);
-                    }}
+                    onClick={prevSlide}
                 >
                     <ArrowBackIosIcon style={{ fontSize: 30 }} />
                 </div>
@@ -27,9 +35,7 @@ function Carousel() {
                 </div>
                 <div
                     className="right"
-                    onClick={() => {
-                        currImg < images.length - 1 && setCurrImg(currImg + 1);
-                    }}
+                    onClick={nextSlide}
                 >
                     <ArrowForwardIosIcon style={{ fontSize: 30 }} />
                 </div>
